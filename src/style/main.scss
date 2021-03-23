@@ -1,16 +1,6 @@
 html {
   font-size: 62.5%;
 }
-
-h1 {
-  font-size: 1rem;
-}
-
-body {
-  font-family: "Open Sans";
-  color: #808080;
-}
-
 *,
 *::after,
 *::before {
@@ -18,10 +8,15 @@ body {
   padding: 0;
   box-sizing: inherit;
 }
-
+body {
+  font-family: "Open Sans";
+  color: #808080;
+}
 @import "layout";
 @import "headernavbar";
 @import "auth/signin";
 @import "auth/signup";
+
 @import "page-title";
 @import "form-fields";
+@import "details";
