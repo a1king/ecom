@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-
 import { reduxForm, Field } from "redux-form";
-
 import { FormInput, FormButton } from "../formFields";
 import Details from "../details";
-
 import history from "../../history";
-
 class SignUpForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
@@ -42,9 +38,8 @@ class SignUpForm extends Component {
           name="email"
           component={FormInput}
         />
-
         <Field
-          className="sign-up-form__confirm"
+          className="sign-up-form__password"
           type="password"
           title="Password"
           placeholder="Password"
@@ -52,26 +47,25 @@ class SignUpForm extends Component {
           component={FormInput}
         />
         <Field
-          className="sign-up-form__confirm-password"
+          className="sign-up-form__confirm"
           type="password"
           title="Confirm Password"
           placeholder="Confirm Password"
           name="confirm"
           component={FormInput}
         />
-
         <div className="sign-up-form__line"></div>
         <Field
           className="sign-up-form__login"
           onClick={() => history.push("/account")}
           type="submit"
-          title="Login"
+          title="Create Account"
           name="login"
           component={FormButton}
         />
         <Field
           className="sign-up-form__back"
-          onClick={() => console.log("tryna go back")}
+          onClick={() => history.push("/signin")}
           type="button"
           title="Back"
           name="back"
@@ -87,9 +81,7 @@ class SignUpForm extends Component {
     );
   }
 }
-
 SignUpForm = reduxForm({
   form: "SignUpForm",
 })(SignUpForm);
-
 export default SignUpForm;
