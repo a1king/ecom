@@ -3,6 +3,7 @@ import {
   setNavbarLinks,
   changeNavbarActive,
   fetchShopProducts,
+  filterProductsWithCategoryId,
 } from "./headernavbar";
 
 import { fetchUserPurchases, setPurchaseDetail } from "./user";
@@ -17,4 +18,5 @@ export {
   setPurchaseDetail,
   fetchShopCategories,
   fetchShopProducts,
+  filterProductsWithCategoryId,
 };
